@@ -1,0 +1,13 @@
+<div class="counter-container">
+    <h1>CounterMachine</h1>
+    <div class="counter-value" [ngClass]="{'positive': (count$ | async) > 0, 'negative': (count$ | async) < 0}">
+      {{ count$ | async }}
+    </div>
+    
+    <div class="button-container">
+      <button (click)="increment()">Increment</button>
+      <button (click)="decrement()" class="decrement">Decrement</button>
+      <button (click)="reset()" class="reset">Reset</button>
+    </div>
+  </div>
+  
